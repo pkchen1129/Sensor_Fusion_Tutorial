@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/pkchen/Documents/SFND_Lidar_Obstacle_Detection/src/quiz/cluster
+CMAKE_SOURCE_DIR = /home/pkchen/Desktop/Sensor_Fusion_Tutorial/Udacity_Lidar_Obstacle_Detection/src/quiz/cluster
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/pkchen/Documents/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/build
+CMAKE_BINARY_DIR = /home/pkchen/Desktop/Sensor_Fusion_Tutorial/Udacity_Lidar_Obstacle_Detection/src/quiz/cluster/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pkchen/Documents/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/build/CMakeFiles /home/pkchen/Documents/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pkchen/Desktop/Sensor_Fusion_Tutorial/Udacity_Lidar_Obstacle_Detection/src/quiz/cluster/build/CMakeFiles /home/pkchen/Desktop/Sensor_Fusion_Tutorial/Udacity_Lidar_Obstacle_Detection/src/quiz/cluster/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pkchen/Documents/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pkchen/Desktop/Sensor_Fusion_Tutorial/Udacity_Lidar_Obstacle_Detection/src/quiz/cluster/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -150,32 +150,32 @@ cluster.cpp.s:
 	$(MAKE) -f CMakeFiles/quizCluster.dir/build.make CMakeFiles/quizCluster.dir/cluster.cpp.s
 .PHONY : cluster.cpp.s
 
-home/pkchen/Documents/SFND_Lidar_Obstacle_Detection/src/render/render.o: home/pkchen/Documents/SFND_Lidar_Obstacle_Detection/src/render/render.cpp.o
+home/pkchen/Desktop/Sensor_Fusion_Tutorial/Udacity_Lidar_Obstacle_Detection/src/render/render.o: home/pkchen/Desktop/Sensor_Fusion_Tutorial/Udacity_Lidar_Obstacle_Detection/src/render/render.cpp.o
 
-.PHONY : home/pkchen/Documents/SFND_Lidar_Obstacle_Detection/src/render/render.o
+.PHONY : home/pkchen/Desktop/Sensor_Fusion_Tutorial/Udacity_Lidar_Obstacle_Detection/src/render/render.o
 
 # target to build an object file
-home/pkchen/Documents/SFND_Lidar_Obstacle_Detection/src/render/render.cpp.o:
-	$(MAKE) -f CMakeFiles/quizCluster.dir/build.make CMakeFiles/quizCluster.dir/home/pkchen/Documents/SFND_Lidar_Obstacle_Detection/src/render/render.cpp.o
-.PHONY : home/pkchen/Documents/SFND_Lidar_Obstacle_Detection/src/render/render.cpp.o
+home/pkchen/Desktop/Sensor_Fusion_Tutorial/Udacity_Lidar_Obstacle_Detection/src/render/render.cpp.o:
+	$(MAKE) -f CMakeFiles/quizCluster.dir/build.make CMakeFiles/quizCluster.dir/home/pkchen/Desktop/Sensor_Fusion_Tutorial/Udacity_Lidar_Obstacle_Detection/src/render/render.cpp.o
+.PHONY : home/pkchen/Desktop/Sensor_Fusion_Tutorial/Udacity_Lidar_Obstacle_Detection/src/render/render.cpp.o
 
-home/pkchen/Documents/SFND_Lidar_Obstacle_Detection/src/render/render.i: home/pkchen/Documents/SFND_Lidar_Obstacle_Detection/src/render/render.cpp.i
+home/pkchen/Desktop/Sensor_Fusion_Tutorial/Udacity_Lidar_Obstacle_Detection/src/render/render.i: home/pkchen/Desktop/Sensor_Fusion_Tutorial/Udacity_Lidar_Obstacle_Detection/src/render/render.cpp.i
 
-.PHONY : home/pkchen/Documents/SFND_Lidar_Obstacle_Detection/src/render/render.i
+.PHONY : home/pkchen/Desktop/Sensor_Fusion_Tutorial/Udacity_Lidar_Obstacle_Detection/src/render/render.i
 
 # target to preprocess a source file
-home/pkchen/Documents/SFND_Lidar_Obstacle_Detection/src/render/render.cpp.i:
-	$(MAKE) -f CMakeFiles/quizCluster.dir/build.make CMakeFiles/quizCluster.dir/home/pkchen/Documents/SFND_Lidar_Obstacle_Detection/src/render/render.cpp.i
-.PHONY : home/pkchen/Documents/SFND_Lidar_Obstacle_Detection/src/render/render.cpp.i
+home/pkchen/Desktop/Sensor_Fusion_Tutorial/Udacity_Lidar_Obstacle_Detection/src/render/render.cpp.i:
+	$(MAKE) -f CMakeFiles/quizCluster.dir/build.make CMakeFiles/quizCluster.dir/home/pkchen/Desktop/Sensor_Fusion_Tutorial/Udacity_Lidar_Obstacle_Detection/src/render/render.cpp.i
+.PHONY : home/pkchen/Desktop/Sensor_Fusion_Tutorial/Udacity_Lidar_Obstacle_Detection/src/render/render.cpp.i
 
-home/pkchen/Documents/SFND_Lidar_Obstacle_Detection/src/render/render.s: home/pkchen/Documents/SFND_Lidar_Obstacle_Detection/src/render/render.cpp.s
+home/pkchen/Desktop/Sensor_Fusion_Tutorial/Udacity_Lidar_Obstacle_Detection/src/render/render.s: home/pkchen/Desktop/Sensor_Fusion_Tutorial/Udacity_Lidar_Obstacle_Detection/src/render/render.cpp.s
 
-.PHONY : home/pkchen/Documents/SFND_Lidar_Obstacle_Detection/src/render/render.s
+.PHONY : home/pkchen/Desktop/Sensor_Fusion_Tutorial/Udacity_Lidar_Obstacle_Detection/src/render/render.s
 
 # target to generate assembly for a file
-home/pkchen/Documents/SFND_Lidar_Obstacle_Detection/src/render/render.cpp.s:
-	$(MAKE) -f CMakeFiles/quizCluster.dir/build.make CMakeFiles/quizCluster.dir/home/pkchen/Documents/SFND_Lidar_Obstacle_Detection/src/render/render.cpp.s
-.PHONY : home/pkchen/Documents/SFND_Lidar_Obstacle_Detection/src/render/render.cpp.s
+home/pkchen/Desktop/Sensor_Fusion_Tutorial/Udacity_Lidar_Obstacle_Detection/src/render/render.cpp.s:
+	$(MAKE) -f CMakeFiles/quizCluster.dir/build.make CMakeFiles/quizCluster.dir/home/pkchen/Desktop/Sensor_Fusion_Tutorial/Udacity_Lidar_Obstacle_Detection/src/render/render.cpp.s
+.PHONY : home/pkchen/Desktop/Sensor_Fusion_Tutorial/Udacity_Lidar_Obstacle_Detection/src/render/render.cpp.s
 
 # Help Target
 help:
@@ -189,9 +189,9 @@ help:
 	@echo "... cluster.o"
 	@echo "... cluster.i"
 	@echo "... cluster.s"
-	@echo "... home/pkchen/Documents/SFND_Lidar_Obstacle_Detection/src/render/render.o"
-	@echo "... home/pkchen/Documents/SFND_Lidar_Obstacle_Detection/src/render/render.i"
-	@echo "... home/pkchen/Documents/SFND_Lidar_Obstacle_Detection/src/render/render.s"
+	@echo "... home/pkchen/Desktop/Sensor_Fusion_Tutorial/Udacity_Lidar_Obstacle_Detection/src/render/render.o"
+	@echo "... home/pkchen/Desktop/Sensor_Fusion_Tutorial/Udacity_Lidar_Obstacle_Detection/src/render/render.i"
+	@echo "... home/pkchen/Desktop/Sensor_Fusion_Tutorial/Udacity_Lidar_Obstacle_Detection/src/render/render.s"
 .PHONY : help
 
 

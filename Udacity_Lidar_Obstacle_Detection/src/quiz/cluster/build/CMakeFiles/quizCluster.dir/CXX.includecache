@@ -6,37 +6,37 @@
 
 #IncludeRegexTransform: 
 
-/home/pkchen/Documents/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/cluster.cpp
+/home/pkchen/Desktop/Sensor_Fusion_Tutorial/Udacity_Lidar_Obstacle_Detection/src/quiz/cluster/cluster.cpp
 ../../render/render.h
-/home/pkchen/Documents/SFND_Lidar_Obstacle_Detection/src/render/render.h
+/home/pkchen/Desktop/Sensor_Fusion_Tutorial/Udacity_Lidar_Obstacle_Detection/src/render/render.h
 ../../render/box.h
-/home/pkchen/Documents/SFND_Lidar_Obstacle_Detection/src/render/box.h
+/home/pkchen/Desktop/Sensor_Fusion_Tutorial/Udacity_Lidar_Obstacle_Detection/src/render/box.h
 chrono
 -
 string
 -
 kdtree.h
-/home/pkchen/Documents/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/kdtree.h
+/home/pkchen/Desktop/Sensor_Fusion_Tutorial/Udacity_Lidar_Obstacle_Detection/src/quiz/cluster/kdtree.h
 
-/home/pkchen/Documents/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/kdtree.h
+/home/pkchen/Desktop/Sensor_Fusion_Tutorial/Udacity_Lidar_Obstacle_Detection/src/quiz/cluster/kdtree.h
 ../../render/render.h
-/home/pkchen/Documents/SFND_Lidar_Obstacle_Detection/src/render/render.h
+/home/pkchen/Desktop/Sensor_Fusion_Tutorial/Udacity_Lidar_Obstacle_Detection/src/render/render.h
 math.h
 -
 
-/home/pkchen/Documents/SFND_Lidar_Obstacle_Detection/src/render/box.h
+/home/pkchen/Desktop/Sensor_Fusion_Tutorial/Udacity_Lidar_Obstacle_Detection/src/render/box.h
 Eigen/Geometry
 -
 
-/home/pkchen/Documents/SFND_Lidar_Obstacle_Detection/src/render/render.cpp
+/home/pkchen/Desktop/Sensor_Fusion_Tutorial/Udacity_Lidar_Obstacle_Detection/src/render/render.cpp
 render.h
-/home/pkchen/Documents/SFND_Lidar_Obstacle_Detection/src/render/render.h
+/home/pkchen/Desktop/Sensor_Fusion_Tutorial/Udacity_Lidar_Obstacle_Detection/src/render/render.h
 
-/home/pkchen/Documents/SFND_Lidar_Obstacle_Detection/src/render/render.h
+/home/pkchen/Desktop/Sensor_Fusion_Tutorial/Udacity_Lidar_Obstacle_Detection/src/render/render.h
 pcl/visualization/pcl_visualizer.h
 -
 box.h
-/home/pkchen/Documents/SFND_Lidar_Obstacle_Detection/src/render/box.h
+/home/pkchen/Desktop/Sensor_Fusion_Tutorial/Udacity_Lidar_Obstacle_Detection/src/render/box.h
 iostream
 -
 vector
@@ -47,16 +47,12 @@ string
 /usr/include/eigen3/Eigen/Cholesky
 Core
 /usr/include/eigen3/Eigen/Core
-Jacobi
-/usr/include/eigen3/Eigen/Jacobi
 src/Core/util/DisableStupidWarnings.h
 /usr/include/eigen3/Eigen/src/Core/util/DisableStupidWarnings.h
 src/Cholesky/LLT.h
 /usr/include/eigen3/Eigen/src/Cholesky/LLT.h
 src/Cholesky/LDLT.h
 /usr/include/eigen3/Eigen/src/Cholesky/LDLT.h
-mkl_lapacke.h
-/usr/include/eigen3/Eigen/mkl_lapacke.h
 src/misc/lapacke.h
 /usr/include/eigen3/Eigen/src/misc/lapacke.h
 src/Cholesky/LLT_LAPACKE.h
@@ -67,7 +63,7 @@ src/Core/util/ReenableStupidWarnings.h
 /usr/include/eigen3/Eigen/Core
 src/Core/util/DisableStupidWarnings.h
 /usr/include/eigen3/Eigen/src/Core/util/DisableStupidWarnings.h
-cuda_runtime.h
+math_functions.hpp
 -
 new
 -
@@ -187,8 +183,6 @@ src/Core/arch/AVX/Complex.h
 /usr/include/eigen3/Eigen/src/Core/arch/AVX/Complex.h
 src/Core/arch/AVX/TypeCasting.h
 /usr/include/eigen3/Eigen/src/Core/arch/AVX/TypeCasting.h
-src/Core/arch/SSE/TypeCasting.h
-/usr/include/eigen3/Eigen/src/Core/arch/SSE/TypeCasting.h
 src/Core/arch/SSE/PacketMath.h
 /usr/include/eigen3/Eigen/src/Core/arch/SSE/PacketMath.h
 src/Core/arch/SSE/MathFunctions.h
@@ -467,8 +461,6 @@ src/Eigenvalues/GeneralizedEigenSolver.h
 /usr/include/eigen3/Eigen/src/Eigenvalues/GeneralizedEigenSolver.h
 src/Eigenvalues/MatrixBaseEigenvalues.h
 /usr/include/eigen3/Eigen/src/Eigenvalues/MatrixBaseEigenvalues.h
-mkl_lapacke.h
-/usr/include/eigen3/Eigen/mkl_lapacke.h
 src/misc/lapacke.h
 /usr/include/eigen3/Eigen/src/misc/lapacke.h
 src/Eigenvalues/RealSchur_LAPACKE.h
@@ -561,8 +553,6 @@ src/LU/FullPivLU.h
 /usr/include/eigen3/Eigen/src/LU/FullPivLU.h
 src/LU/PartialPivLU.h
 /usr/include/eigen3/Eigen/src/LU/PartialPivLU.h
-mkl_lapacke.h
-/usr/include/eigen3/Eigen/mkl_lapacke.h
 src/misc/lapacke.h
 /usr/include/eigen3/Eigen/src/misc/lapacke.h
 src/LU/PartialPivLU_LAPACKE.h
@@ -595,8 +585,6 @@ src/QR/ColPivHouseholderQR.h
 /usr/include/eigen3/Eigen/src/QR/ColPivHouseholderQR.h
 src/QR/CompleteOrthogonalDecomposition.h
 /usr/include/eigen3/Eigen/src/QR/CompleteOrthogonalDecomposition.h
-mkl_lapacke.h
-/usr/include/eigen3/Eigen/mkl_lapacke.h
 src/misc/lapacke.h
 /usr/include/eigen3/Eigen/src/misc/lapacke.h
 src/QR/HouseholderQR_LAPACKE.h
@@ -625,8 +613,6 @@ src/SVD/JacobiSVD.h
 /usr/include/eigen3/Eigen/src/SVD/JacobiSVD.h
 src/SVD/BDCSVD.h
 /usr/include/eigen3/Eigen/src/SVD/BDCSVD.h
-mkl_lapacke.h
-/usr/include/eigen3/Eigen/mkl_lapacke.h
 src/misc/lapacke.h
 /usr/include/eigen3/Eigen/src/misc/lapacke.h
 src/SVD/JacobiSVD_LAPACKE.h
