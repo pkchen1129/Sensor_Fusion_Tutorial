@@ -93,6 +93,9 @@ void cityBlock(pcl::visualization::PCLVisualizer::Ptr& viewer)
 
     // Segmentation for the plane(road)
     std::pair<pcl::PointCloud<pcl::PointXYZI>::Ptr, pcl::PointCloud<pcl::PointXYZI>::Ptr> segmentCloud = pointProcessorI.SegmentPlane(inputCloud, 25, 0.3);
+    renderPointCloud(viewer, segmentCloud.second, "Planecloud", Color(0,1,0)); //Green
+
+    
     // Clustering for different cars
     std::vector<pcl::PointCloud<pcl::PointXYZI>::Ptr> cloudClusters = pointProcessorI.Clustering(segmentCloud.first, 0.53, 10, 500); //segmentcloud.first would be the obstacle
     int clusterId = 0;
@@ -107,7 +110,7 @@ void cityBlock(pcl::visualization::PCLVisualizer::Ptr& viewer)
         ++clusterId;
     }
     // renderPointCloud(viewer,filterCloud,"inputCloud");
-    renderPointCloud(viewer,inputCloud,"filterCloud");
+    // renderPointCloud(viewer,inputCloud,"filterCloud");
 
 }
 
