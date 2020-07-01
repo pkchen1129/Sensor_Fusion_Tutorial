@@ -30,8 +30,8 @@ typename pcl::PointCloud<PointT>::Ptr ProcessPointClouds<PointT>::FilterCloud(ty
     // TODO:: Fill in the function to do voxel grid point reduction and region based filtering
     
     //Grid Filtering
-    pcl::VoxelGrid<pcl::PCLPointCloud> vg;
-    typename pcl::PointCloud<PointT>::Ptr cloud_filtered (new pcl::PointCloud<PointT>)
+    pcl::VoxelGrid<PointT> vg;
+    typename pcl::PointCloud<PointT>::Ptr cloud_filtered (new pcl::PointCloud<PointT>);
     vg.setInputCloud (cloud);
     vg.setLeafSize (filterRes, filterRes, filterRes);
     vg.filter (*cloud_filtered);
@@ -39,13 +39,13 @@ typename pcl::PointCloud<PointT>::Ptr ProcessPointClouds<PointT>::FilterCloud(ty
 
     //Region of Interest
     //Setting the crop box
-    typename pcl::PointCloud<PointT>::Ptr cloud_region(new pcl::PoinCloud<PointT>);
+    typename pcl::PointCloud<PointT>::Ptr cloud_region(new pcl::PointCloud<PointT>);
     pcl::CropBox<PointT> crop(true); //
     crop.setMax(maxPoint);
     crop.setMin(minPoint);
     crop.setInputCloud(cloud_filtered);
     crop.filter(*cloud_region);
-
+    
 
     // Find the roof point
     std::vector<int> indices_roof_points;
@@ -64,7 +64,7 @@ typename pcl::PointCloud<PointT>::Ptr ProcessPointClouds<PointT>::FilterCloud(ty
     extract.setInputCloud(cloud_region);
     extract.setIndices(inliers);
     extract.setNegative(true); //To minus out the points
-    extract.filter(cloud_region);
+    extract.filter(*cloud_region); //Remember to add *
     
     auto endTime = std::chrono::steady_clock::now();
     auto elapsedTime = std::chrono::duration_cast<std::chrono::milliseconds>(endTime - startTime);
@@ -83,16 +83,16 @@ std::pair<typename pcl::PointCloud<PointT>::Ptr, typename pcl::PointCloud<PointT
     typename pcl::PointCloud<PointT>::Ptr Obstcloud (new pcl::PointCloud<PointT>() );
     typename pcl::PointCloud<PointT>::Ptr Planecloud (new pcl::PointCloud<PointT>() );
     for(auto index : inliers->indices){
-        Planecloud->points.push_back(cloud->points[index]); //Putting the inliers into the new created Planecloud point cloud
+        Planecloud->points.push_back(cloud->points[index]); //Putting the inliers' index into the new created Planecloud point cloud
     }
 
     // Extract the inliers
     // Create the filtering object
-    pcl::ExtractIndices<pcl::PointXYZ> extract;
+    pcl::ExtractIndices<PointT> extract;
     extract.setInputCloud (cloud);
     extract.setIndices (inliers);
     extract.setNegative (true); //Set negative so that it could be pick out
-    extract.filter (*Obstcloud); //It would filter out the negative part
+    extract.filter (*Obstcloud); //It would filter out the plane(road) part. Obstcloud = cloud - inliers(plane)
     // std::cerr << "PointCloud representing the planar component: " << cloud_p->width * cloud_p->height << " data points." << std::endl;
     
     //Returning the pair<Obstcloud, Planecloud>
@@ -106,10 +106,10 @@ std::pair<typename pcl::PointCloud<PointT>::Ptr, typename pcl::PointCloud<PointT
 {
     // Time segmentation process
     auto startTime = std::chrono::steady_clock::now();
-	// pcl::PointIndices::Ptr inliers;
+
     // TODO:: Fill in this function to find inliers for the cloud.
     // Create the segmentation object
-    pcl::SACSegmentation<pcl::PointXYZ> seg;
+    pcl::SACSegmentation<PointT> seg; //PointXYZ, PointXYZI
     pcl::PointIndices::Ptr inliers (new pcl::PointIndices);
     pcl::ModelCoefficients::Ptr coefficients (new pcl::ModelCoefficients);
     seg.setOptimizeCoefficients(true);
@@ -118,7 +118,8 @@ std::pair<typename pcl::PointCloud<PointT>::Ptr, typename pcl::PointCloud<PointT
     seg.setMaxIterations(maxIterations);
     seg.setDistanceThreshold(distanceThreshold);
 
-    seg.setInputCloud(cloud);
+    seg.setInputCloud(cloud); //The whole cloud
+    // The inliers would be the plane (The road)
     seg.segment(*inliers, *coefficients); //Dereference since it's a pointer
 
     auto endTime = std::chrono::steady_clock::now();
