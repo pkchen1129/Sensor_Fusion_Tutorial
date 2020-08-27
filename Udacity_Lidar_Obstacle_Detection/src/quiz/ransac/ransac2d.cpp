@@ -138,7 +138,8 @@ std::unordered_set<int> Ransac(pcl::PointCloud<pcl::PointXYZ>::Ptr cloud, int ma
 		
 		std::unordered_set<int> inliers; //indices
 		while(inliers.size() < 2)
-			inliers.insert(rand()%(cloud->points.size()));
+			inliers.insert(rand()%(cloud->points.size())); // Will insert two numbers between 0~cloud.size(), ex: 14, 53.
+			//Using these two points to make a Line
 		float x1, x2, y1, y2;
 		auto itr = inliers.begin();
 

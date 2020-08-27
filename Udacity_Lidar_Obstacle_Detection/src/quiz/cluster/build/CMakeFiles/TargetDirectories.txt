@@ -1,3 +1,0 @@
-/home/pkchen/Desktop/Sensor_Fusion_Tutorial/Udacity_Lidar_Obstacle_Detection/src/quiz/cluster/build/CMakeFiles/rebuild_cache.dir
-/home/pkchen/Desktop/Sensor_Fusion_Tutorial/Udacity_Lidar_Obstacle_Detection/src/quiz/cluster/build/CMakeFiles/quizCluster.dir
-/home/pkchen/Desktop/Sensor_Fusion_Tutorial/Udacity_Lidar_Obstacle_Detection/src/quiz/cluster/build/CMakeFiles/edit_cache.dir

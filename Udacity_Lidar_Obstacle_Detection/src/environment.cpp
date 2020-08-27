@@ -148,7 +148,7 @@ int main (int argc, char** argv)
 
     // For Stream PCD
     ProcessPointClouds<pcl::PointXYZI> pointProcessorI; //Create on stack
-    std::vector<boost::filesystem::path> stream = pointProcessorI.streamPcd("../src/sensors/data/pcd/data_1");
+    std::vector<boost::filesystem::path> stream = pointProcessorI.streamPcd("../src/sensors/data/pcd/data_2");
     auto streamIterator = stream.begin();
     pcl::PointCloud<pcl::PointXYZI>::Ptr inputCloudI;
 
